@@ -106,8 +106,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       },
       white: {
         contained:
-          "bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50",
-        outlined: "ring-1 ring-inset ring-white text-black hover:bg-white/10",
+          "bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-100",
+        outlined: "ring-1 ring-inset ring-white text-white hover:bg-white/10",
         soft: "bg-white/20 text-white hover:bg-white/30",
         text: "text-white hover:underline hover:underline-offset-4",
       },
