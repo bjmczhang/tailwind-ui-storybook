@@ -37,7 +37,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-semibold shadow-xs transition-all focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+      "inline-flex items-center justify-center font-semibold transition-all focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
     // ✨ 核心优化：使用语义化变量
     // 这里利用了 Tailwind 的透明度修改器 (Opacity Modifier)，如 bg-primary/10
@@ -56,16 +56,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         outlined:
           "ring-1 ring-inset ring-primary text-primary hover:bg-primary/5",
         soft: "bg-primary/10 text-primary hover:bg-primary/20",
-        text: "text-primary hover:bg-primary/10",
+        text: "text-primary hover:text-primary-hover hover:underline hover:underline-offset-4",
       },
       secondary: {
-        // Secondary 通常是白底灰边，逻辑稍有不同
         contained:
-          "bg-secondary text-secondary-content ring-1 ring-inset ring-secondary-border hover:bg-secondary-hover",
+          "bg-secondary text-secondary-content hover:bg-secondary-hover focus-visible:outline-secondary",
         outlined:
-          "ring-1 ring-inset ring-secondary-content text-secondary-content hover:bg-secondary-content/5",
-        soft: "bg-secondary-content/10 text-secondary-content hover:bg-secondary-content/20",
-        text: "text-secondary-content hover:bg-secondary-content/10",
+          "ring-1 ring-inset ring-secondary text-secondary hover:bg-secondary/5",
+        soft: "bg-secondary/10 text-secondary hover:bg-secondary/20",
+        text: "text-secondary hover:text-secondary-hover hover:underline hover:underline-offset-4",
       },
       success: {
         contained:
@@ -73,14 +72,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         outlined:
           "ring-1 ring-inset ring-success text-success hover:bg-success/10",
         soft: "bg-success/10 text-success hover:bg-success/20",
-        text: "text-success hover:bg-success/10",
+        text: "text-success hover:text-success-hover hover:underline hover:underline-offset-4",
       },
       error: {
         contained:
           "bg-error text-white hover:bg-error-hover focus-visible:outline-error",
         outlined: "ring-1 ring-inset ring-error text-error hover:bg-error/10",
         soft: "bg-error/10 text-error hover:bg-error/20",
-        text: "text-error hover:bg-error/10",
+        text: "text-error hover:text-error-hover hover:underline hover:underline-offset-4",
       },
       warning: {
         contained:
@@ -88,14 +87,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         outlined:
           "ring-1 ring-inset ring-warning text-warning hover:bg-warning/10",
         soft: "bg-warning/10 text-warning hover:bg-warning/20",
-        text: "text-warning hover:bg-warning/10",
+        text: "text-warning hover:text-warning-hover hover:underline hover:underline-offset-4",
       },
       info: {
         contained:
           "bg-info text-white hover:bg-info-hover focus-visible:outline-info",
         outlined: "ring-1 ring-inset ring-info text-info hover:bg-info/10",
         soft: "bg-info/10 text-info hover:bg-info/20",
-        text: "text-info hover:bg-info/10",
+        text: "text-info hover:text-info-hover hover:underline hover:underline-offset-4",
       },
       black: {
         contained:
@@ -103,14 +102,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         outlined:
           "ring-1 ring-inset ring-gray-900 text-gray-900 hover:bg-gray-100",
         soft: "bg-gray-100 text-gray-900 hover:bg-gray-200",
-        text: "text-gray-900 hover:bg-gray-100",
+        text: "text-black hover:underline hover:underline-offset-4",
       },
       white: {
         contained:
           "bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50",
-        outlined: "ring-1 ring-inset ring-white text-white hover:bg-white/10",
+        outlined: "ring-1 ring-inset ring-white text-black hover:bg-white/10",
         soft: "bg-white/20 text-white hover:bg-white/30",
-        text: "text-white hover:bg-white/10",
+        text: "text-white hover:underline hover:underline-offset-4",
       },
     };
 
